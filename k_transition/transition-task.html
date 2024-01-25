@@ -1,0 +1,42 @@
+<!-- width, background-color, transform, opacity width: 100px, height: 50px -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition task</title>
+    <style>
+      div {
+        margin: 0 auto;
+        text-align: center;
+        line-height: 50px;
+        color: aliceblue;
+        width: 200px;
+        height: 50px;
+        background-color: red;
+        transition-property: background-color, opacity, width, transform;
+        transition-delay: 0s, 1s, 0s, 0s;
+        transition-duration: 1s;
+      }
+
+      div::before {
+        content: '마우스를 올려보세요';
+      }
+
+      div:hover {
+        width: 400px;
+        background-color: blue;
+        opacity: 20%;
+        transform: translateX(20px);
+        color: aquamarine;
+      }
+
+      div:hover::before {
+        content: '집가고싶다';
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
